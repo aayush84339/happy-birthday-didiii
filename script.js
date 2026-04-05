@@ -900,7 +900,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const hbdObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            typeText(hbdFinal, 'Happy Birthday, Didi! 💖', 60);
+            typeText(hbdFinal, 'Happy Birthday, Didi!', 60);
             hbdObserver.unobserve(entry.target);
           }
         });
