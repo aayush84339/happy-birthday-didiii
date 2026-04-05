@@ -819,21 +819,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const line2 = document.getElementById('title-line2');
     const subtitle = document.getElementById('birthday-subtitle');
 
-    typeText(line1, 'Happy Birthday', 80, () => {
-      typeText(line2, 'Didi! 🎂', 100, () => {
-        typeText(subtitle, 'Today the world celebrates the day it was blessed with you 💖', 30);
+    typeText(line1, 'Happpyy Birthdayyy', 80, () => {
+      typeText(line2, 'Diidiii!!!', 100, () => {
+        typeText(subtitle, 'Today the world got a little brighter, a lot more beautiful, and infinitely more special!', 30);
       });
     });
   }
 
   // Letter typewriter
   const letterParagraphs = [
-    'Where do I even begin? You are not just a senior to me — you are the elder sister I chose for myself, the one the universe placed right where I needed her most.',
-    'From the very first day we met, you made me feel safe, seen, and valued. You listened when words were all I had, and you understood even when I had none. Your warmth is the kind that never fades — it only grows, and I carry it with me like a quiet flame that lights my hardest days.',
-    'You taught me that strength is not about never breaking — it is about rising every single time, with grace, with patience, with a smile that could mend the sky. I have watched you face storms with such calm courage, and each time, I have silently whispered to myself: "I want to be like her."',
-    'Thank you for every late-night conversation, every piece of advice wrapped in love, every gentle push when I doubted myself, and every hug — spoken or unspoken — that told me everything would be okay.',
+    'Some people come into life and quietly become irreplaceable…You’re that person for me. Happy Birthday didi 💙.',
+    'Thank you for tolerating me every single time. Thank you for making me sometimes feel like I belong.',
+    'Thank you for giving me the best memories of my life. Thank you for being part of some of the best moments of my life. Thank you being there in my life.',
+    'Thank you for being someone whose birthday feels more special to me than my own.',
+    'Thank you for everything you have done for me, knowingly or unknowingly. Thank you didi for being my didii.',
     'On your special day, I wish you all the happiness this world can hold. May your dreams chase you as fiercely as you chase them. May life give you back tenfold the love and kindness you pour into everyone around you.',
-    'I am so proud to call you my Didi. Today and always.',
   ];
 
   const letterSign = '<p class="letter-sign">With all my love & warmth,<br><span class="letter-signature">Your loving junior 💛</span></p>';
