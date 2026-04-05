@@ -1003,7 +1003,7 @@ body {
    ====================================================== */
 #letter-section {
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -1015,7 +1015,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 /* Letter envelope wrapper */
@@ -1163,7 +1163,7 @@ body {
 /* Final wish */
 .final-wish {
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .final-divider {
@@ -1486,3 +1486,4 @@ body {
     height: 240px;
   }
 }
+
