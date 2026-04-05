@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Didi! 🎂💖</title>
+  <meta name="description" content="A heartfelt birthday wish for the most amazing Didi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-ring"></div>
+      <div class="preloader-ring"></div>
+      <div class="preloader-ring"></div>
+      <p class="preloader-text">Preparing something special...</p>
+    </div>
+  </div>
+
+  <!-- ============ ENTRY SCREEN — 3D Gift Box ============ -->
+  <div id="entry-screen">
+    <canvas id="stars-canvas"></canvas>
+    <div class="entry-content">
+      <p class="entry-above-text">✨ You have a surprise ✨</p>
+      <div class="gift-box-3d" id="gift-box">
+        <div class="gift-box-wrapper">
+          <div class="gift-lid-3d">
+            <div class="gift-lid-top"></div>
+            <div class="gift-lid-front"></div>
+            <div class="gift-lid-back"></div>
+            <div class="gift-lid-left"></div>
+            <div class="gift-lid-right"></div>
+            <div class="gift-bow-3d">
+              <div class="bow-left"></div>
+              <div class="bow-right"></div>
+              <div class="bow-knot"></div>
+            </div>
+          </div>
+          <div class="gift-base-3d">
+            <div class="gift-base-front"></div>
+            <div class="gift-base-back"></div>
+            <div class="gift-base-left"></div>
+            <div class="gift-base-right"></div>
+            <div class="gift-base-top"></div>
+            <div class="gift-base-bottom"></div>
+            <div class="gift-ribbon-h"></div>
+            <div class="gift-ribbon-v"></div>
+          </div>
+          <div class="gift-glow"></div>
+        </div>
+      </div>
+      <p class="entry-text">Tap the gift to begin 🎁</p>
+    </div>
+    <div class="floating-hearts-bg" id="entry-hearts"></div>
+  </div>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div id="main-content" class="hidden">
+
+    <!-- Animated background gradient -->
+    <div class="ambient-gradient" id="ambient-gradient"></div>
+
+    <!-- Canvases -->
+    <canvas id="confetti-canvas"></canvas>
+    <canvas id="fireworks-canvas"></canvas>
+
+    <!-- Music toggle -->
+    <button id="music-toggle" title="Toggle Music">
+      <span class="music-icon">🎵</span>
+      <span class="music-wave"><span></span><span></span><span></span><span></span></span>
+    </button>
+
+    <!-- -------- SECTION 1: Candle Birthday Cake -------- -->
+    <section id="cake-section" class="section">
+      <div class="parallax-bg" data-speed="0.3"></div>
+      <div class="section-particles" id="cake-particles"></div>
+      <div class="cake-scene">
+        <h2 class="make-wish-text" id="make-wish-text">Make a wish & blow the candles 🕯️</h2>
+        <div class="birthday-cake" id="birthday-cake">
+          <div class="candles-row">
+            <div class="candle"><div class="flame" id="flame1"><div class="flame-inner"></div></div><div class="candle-body"></div></div>
+            <div class="candle"><div class="flame" id="flame2"><div class="flame-inner"></div></div><div class="candle-body"></div></div>
+            <div class="candle candle-center"><div class="flame flame-big" id="flame3"><div class="flame-inner"></div></div><div class="candle-body"></div></div>
+            <div class="candle"><div class="flame" id="flame4"><div class="flame-inner"></div></div><div class="candle-body"></div></div>
+            <div class="candle"><div class="flame" id="flame5"><div class="flame-inner"></div></div><div class="candle-body"></div></div>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <button class="blow-btn" id="blow-btn">🌬️ Blow the Candles!</button>
+      </div>
+    </section>
+
+    <!-- -------- SECTION 2: Birthday Wish + Photo -------- -->
+    <section id="birthday-section" class="section">
+      <div class="parallax-bg" data-speed="0.2"></div>
+      <div class="sparkle-overlay"></div>
+      <div class="wish-container" id="wish-container">
+        <div class="wish-badge">🎉 HAPPY BIRTHDAY 🎉</div>
+        <h1 class="birthday-title">
+          <span class="line1" id="title-line1"></span>
+          <span class="line2" id="title-line2"></span>
+        </h1>
+        <div class="photo-frame photo-frame-wish glass-card">
+          <img src="photo1.jpg" alt="Birthday photo of Didi" id="photo1" onerror="this.style.display='none'; this.parentElement.querySelector('.photo-fallback').style.display='flex';" />
+          <div class="photo-fallback"><span>📸</span><p>Photo of Didi</p></div>
+          <div class="frame-border-anim"></div>
+        </div>
+        <p class="birthday-subtitle" id="birthday-subtitle"></p>
+        <div class="cake-emoji-row">
+          <span>🎈</span><span>🎉</span><span>🎂</span><span>🎉</span><span>🎈</span>
+        </div>
+      </div>
+      <div class="scroll-indicator" id="scroll-indicator">
+        <span>Scroll down for a letter from my heart</span>
+        <div class="scroll-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------- SECTION 3: The Letter -------- -->
+    <section id="letter-section" class="section">
+      <div class="parallax-bg" data-speed="0.15"></div>
+      <div class="section-particles" id="letter-particles"></div>
+      <div class="letter-container">
+        <div class="letter-envelope-wrapper reveal-item">
+          <div class="letter-seal">💌</div>
+          <div class="letter-paper" id="letter-paper">
+            <div class="letter-header">
+              <span class="letter-date">6th April, 2026</span>
+              <div class="letter-flowers">🌸🌷🌺</div>
+            </div>
+            <h2 class="letter-greeting">Dear Didi,</h2>
+            <div class="letter-body" id="letter-body">
+              <!-- Typewriter content injected by JS -->
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-frame photo-frame-letter glass-card reveal-item">
+          <img src="photo2.jpg" alt="A cherished moment with Didi" id="photo2" onerror="this.style.display='none'; this.parentElement.querySelector('.photo-fallback').style.display='flex';" />
+          <div class="photo-fallback"><span>💖</span><p>A cherished moment</p></div>
+          <div class="frame-border-anim"></div>
+        </div>
+
+        <div class="final-wish reveal-item">
+          <div class="final-divider">
+            <span>✦</span><span>✦</span><span>✦</span>
+          </div>
+          <p class="final-text">🎂 Here's to another year of your magic ✨</p>
+          <h2 class="hbd-large" id="hbd-final"></h2>
+          <!-- Glowing animated heart -->
+          <div class="pulsing-heart-container">
+            <div class="pulsing-heart">
+              <div class="heart-shape"></div>
+              <div class="heart-glow"></div>
+              <div class="heart-particles" id="heart-particles"></div>
+            </div>
+          </div>
+          <div class="hearts-burst" id="hearts-burst"></div>
+          <p class="forever-text">Today, tomorrow, and always — I'm grateful for you 💛</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
